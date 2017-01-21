@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/activity_add_bar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fr.project.isep.beerspotter.AddBarActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@android:color/black"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_cloud_upload_black_150dp"
+        android:id="@+id/imageView"
+        android:background="@color/common_google_signin_btn_text_dark_disabled"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false" />
+
+    <TextView
+        android:text="Add a picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add"
+        android:textColor="#ffcc0000"
+        android:layout_gravity="center"
+        android:layout_marginTop="-20dp" />
+    <TextView
+        android:text="About"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/about"
+        android:textColor="#ffcc0000"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Name of the bar"
+        android:ems="10"
+        android:id="@+id/barname" />
+
+    <EditText
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/lowerPrice"
+        android:hint="Lower price for a pint of beer" />
+
+    <TextView
+        android:text="€"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textColor="#ffcc0000"
+        android:layout_gravity="right"
+        android:layout_marginTop="-35dp"
+        android:layout_marginRight="35dp"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+    <TextView
+        android:text="You are here:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/here"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:text="17 avenue de l'Europe\nBois Colombes, 92270"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/address"
+        android:textColor="#ffcc0000"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textSize="15dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:text="Validate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/validate"
+            android:layout_alignParentBottom="true"
+            android:onClick="add"/>
+    </RelativeLayout>
+
+
+</LinearLayout>
